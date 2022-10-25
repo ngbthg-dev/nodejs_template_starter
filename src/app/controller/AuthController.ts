@@ -1,0 +1,6 @@
+class AuthController
+{
+    
+}
+
+export {AuthController}

@@ -8,12 +8,12 @@ if (cluster.isPrimary)
         cluster.fork()
     }
 
-    cluster.on("exit", () => {
-
+    cluster.on("exit", (worker, code, signal) => {
+        console.log(`worker ${worker.process.pid} died`);
     })
 }
 else
 {
-    const server = new Server()
-    server.start()
+    (new Server()).start()
+    console.log(`Worker ${process.pid} started`);
 }

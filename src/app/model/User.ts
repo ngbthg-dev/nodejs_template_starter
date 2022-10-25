@@ -1,4 +1,4 @@
-import {Column, Entity, Repository} from "typeorm"
+import {Column, Entity} from "typeorm"
 import {AbstractModel} from "./AbstractModel"
 
 @Entity()
